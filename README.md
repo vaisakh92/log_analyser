@@ -14,7 +14,7 @@ this is a system that provides HTTP APIs for obtaining the following stats on a 
    e) the first & last path name components of top-10 most frequently accessed resources
    
 Pre-req:
-Ubuntu Server (preferably 14.04 LTS), please edit the following configurations around your predefined ones(if any).
+Ubuntu Server (preferably 16.04 LTS), please edit the following configurations around your predefined ones(if any).
  1) install the following: pandas, Flask,wsgi.
  ```
  sudo apt update
