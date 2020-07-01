@@ -1,2 +1,3 @@
-00 00 * * * * /usr/bin/python3 /home/pandas_parser_daily.python3
+00 00 * * * * /usr/bin/python3 /home/pandas_parser_daily.py
+00 00 1 * * * /usr/bin/python3 /home/pandas_parser_monthly.py
 00 00 * * * * /bin/tar -cf /access.tar *.log
