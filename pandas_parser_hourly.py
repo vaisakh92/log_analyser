@@ -29,13 +29,13 @@ rate = {
     'count':dt
 }
 df = pd.DataFrame (referer)
-df.to_csv (r'/home/maddy/programming/python/referer.csv', mode='a', header=False)
+df.to_csv (r'/home/programming/python/referer.csv', mode='a', header=False)
 df = pd.DataFrame (ip)
-df.to_csv (r'/home/maddy/programming/python/ip.csv', mode='a', header=False)
+df.to_csv (r'/home/programming/python/ip.csv', mode='a', header=False)
 df = pd.DataFrame (request)
-df.to_csv (r'/home/maddy/programming/python/request.csv', mode='a', header=False)
+df.to_csv (r'/home/programming/python/request.csv', mode='a', header=False)
 df = pd.DataFrame (rate)
 df = df.transpose()
-df.to_csv (r'/home/maddy/programming/python/rate.csv', mode='a', header=False)
+df.to_csv (r'/home/programming/python/rate.csv', mode='a', header=False)
 df = pd.DataFrame (time)
-df.to_csv (r'/home/maddy/programming/python/time.csv', mode='a', header=False)
+df.to_csv (r'/home/programming/python/time.csv', mode='a', header=False)
