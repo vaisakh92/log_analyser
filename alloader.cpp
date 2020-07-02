@@ -3,47 +3,44 @@
 #include <string>
 #include <vector>
 
-
-
-
 using namespace std;
 
-struct Module {
+struct Case {
 	int begin, end;
 	vector<pair<string, int> > tab;
 	vector<string> ex;
 	vector<int> bytes;
 };
 
-vector<Module> v;
+vector<Case> v;
 
 int main() {
 	int ri = 0, n, x;
-	char op, buf[1024];
+	char op, arr[1024];
 	map<string, vector<int> > tab;
 
 	while (scanf(" %c", &op) != EOF && op != '$') {
 		v.clear();
 		while (op != '$') {
 			
-			v.push_back(Module());
+			v.push_back(Case());
 			while (op != 'Z') {
 				
 				if (op == 'D') {
-					scanf("%s%x", buf, &x);
-					v.back().tab.push_back(make_pair(string(buf), x));
+					scanf("%s%x", arr, &x);
+					v.back().tab.push_back(make_pair(string(arr), x));
 				} else if (op == 'E') {
-					scanf("%s", buf);
-					v.back().ex.push_back(buf);
+					scanf("%s", arr);
+					v.back().ex.push_back(arr);
 				} else if (op == 'C') {
 					scanf("%x", &n);
 					for (int i = 0; i < n; ++i) {
-						scanf("%s", buf);
-						if (buf[0] == '$') {
+						scanf("%s", arr);
+						if (arr[0] == '$') {
 							v.back().bytes.push_back(-1);
 						} else {
 							
-							sscanf(buf, "%x", &x);
+							sscanf(arr, "%x", &x);
 							v.back().bytes.push_back(x);
 						}
 					}
